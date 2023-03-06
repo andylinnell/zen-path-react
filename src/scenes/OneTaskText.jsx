@@ -1,28 +1,37 @@
-import { useNavigate } from 'react-router-dom'
-import Container from 'react-bootstrap/Container'
-import  Row from 'react-bootstrap/Row'
-import  Col from 'react-bootstrap/Col'
-import  Button from 'react-bootstrap/Button'
-import ".//homepage.css"
+import { useState, useEffect } from 'react'
+import ".//zen-path.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import TaskCardText from '../components/TaskCardText'
 
 
-export default function OneTaskText({ task}) {
-    const navigate = useNavigate()
+export default function OneTaskText() {
+    const [taskData, setTaskData] = useState()
+    // const { level, setLevel } = useContext(TaskContext);
+    // const { taskNo, setTaskNo } = useContext(TaskContext);
+    // const { title, setTitle } = useContext(TaskContext);
+    // const { text, setText } = useContext(TaskContext);
+    // const { products, setProducts } = useContext(ResultsContext);
+    // const { bestFor } = useContext(TaskContext);
+
+    useEffect(() => {
+        fetch('https://zen-path-api.web.app/tasks')
+            .then(res => res.json())
+            .then(setTaskData)
+            .catch(err => console.error(err))
+    }, []);
+    
 
     return (
-        <div className="task">
-            <Container>
-                <Row>
-                    <Col>Text Task</Col>
-                </Row>
-                <Row>
-                    <Col></Col>
-                </Row>
-            <div className="homebutton">
-                <Button onClick={() => navigate('/tasks')}>Back to Tasks</Button>
-            </div>
-            </Container>
-        </div>
-    )
+        <article>
+
+            {!taskData
+                ? (<h2>Loading...</h2>)
+                : (<section id="section">
+                    {taskData.map((element) => {
+                        return <TaskCardText key={element.id} task={element} />
+                    })}
+                </section>)
+            }
+
+        </article>)
 }

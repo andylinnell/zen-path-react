@@ -1,0 +1,196 @@
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
+
+  *,
+  *::before,
+  *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+  }
+
+  html {
+      background: linear-gradient(317deg, rgba(165, 118, 241, 1) 0%, rgba(108, 167, 230, 1) 19%, rgba(75, 114, 252, 1) 75%, rgba(172, 23, 212, 1) 100%);
+      background-color: black;
+  }
+
+
+  /******************************* Page Backgrounds ******************************/
+  .homebg {
+      background: rgb(165, 118, 241);
+      background: linear-gradient(317deg, rgba(165, 118, 241, 1) 0%, rgba(108, 167, 230, 1) 19%, rgba(75, 114, 252, 1) 75%, rgba(172, 23, 212, 1) 100%);
+      height: 100vh;
+      text-align: center;
+  }
+
+  .adminbg {
+      background: rgb(165, 118, 241);
+      background: linear-gradient(317deg, rgba(165, 118, 241, 1) 0%, rgba(108, 167, 230, 1) 19%, rgba(75, 114, 252, 1) 75%, rgba(172, 23, 212, 1) 100%);
+      height: 100vh;
+      text-align: center;
+  }
+
+
+  /******************************* h1s ******************************/
+
+
+  .welcomeh1 {
+      text-align: center;
+      padding-top: 20vh;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 700;
+      padding-bottom: 1em;
+      color: #99a3f0;
+      background-image: -webkit-linear-gradient(0deg, #7d1ebd 49%, #cf8e7e 99%, #d36529 43%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+  }
+
+  .tasksh1 {
+      color: purple;
+      text-align: center;
+      padding-top: 6vh;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 600;
+      padding-bottom: 1em;
+      font-size: 3em;
+  }
+
+  .taskh1 {
+      color: purple;
+      text-align: center;
+      padding-top: 6vh;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 600;
+      font-size: 3em;
+  }
+
+  .vidh1 {
+      color: purple;
+      text-align: center;
+      padding-top: 3vh;
+      padding-bottom: 2vh;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 600;
+      font-size: 3em;
+  }
+
+  .adminh1 {
+      color: purple;
+      text-align: center;
+      padding-top: 3vh;
+      padding-bottom: 3vh;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 600;
+      font-size: 3em;
+  }
+
+  p {
+    color: black;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    margin-bottom: 3em;
+}
+
+  /******************************* Buttons ******************************/
+
+
+  .adminbutt {
+      padding-bottom: 4em;
+  }
+
+  .homebutton {
+      padding: 10px;
+      font-family: 'Comfortaa', cursive;
+      filter: drop-shadow(0 0 0.75rem crimson);
+  }
+
+  .beginbutton {
+      filter: drop-shadow(0 0 0.75rem crimson);
+  }
+
+  /******************************************************************/
+
+  .tasks {
+      background: rgb(165, 118, 241);
+      background: linear-gradient(317deg, rgba(165, 118, 241, 1) 0%, rgba(108, 167, 230, 1) 19%, rgba(75, 114, 252, 1) 75%, rgba(172, 23, 212, 1) 100%);
+      height: 100vh;
+      text-align: center;
+      padding: 4em;
+      padding-bottom: 10em;
+
+  }
+
+  /******************************* Images *****************************/
+
+  .tempimg {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 3em;
+}
+
+  img {
+      filter: drop-shadow(0 0 0.75rem crimson);
+  }
+
+  .ying {
+      margin-bottom: 3em;
+  }
+
+    /******************************* Task Text *****************************/
+
+
+  .texttask {
+      background: rgb(165, 118, 241);
+      background: linear-gradient(317deg, rgba(165, 118, 241, 1) 0%, rgba(108, 167, 230, 1) 19%, rgba(75, 114, 252, 1) 75%, rgba(172, 23, 212, 1) 100%);
+      height: 100% auto;
+      text-align: center;
+      padding: 4em;
+      padding-bottom: 10em;
+  }
+
+  .textbox {
+    border: 2px solid blue;
+    padding: 1em;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    background: linear-gradient(317deg, rgb(241, 169, 118) 0%, rgb(231, 182, 75) 19%, rgb(235, 118, 22) 75%, rgb(226, 60, 27) 100%);
+
+}
+
+
+
+  /******************************* Tasks by Level *****************************/
+
+  .videotask {
+    background: rgb(165, 118, 241);
+    background: linear-gradient(317deg, rgb(241, 169, 118) 0%, rgb(231, 182, 75) 19%, rgb(235, 118, 22) 75%, rgb(226, 60, 27) 100%);
+    height: 100vh;
+    text-align: center;
+    padding: 4em;
+    padding-bottom: 10em;
+}
+
+  .viddiv {
+    width: 50% auto;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+  .form {
+      text-align: center;
+  }
+
+
+
+  .checkbox {
+      display: "flex";
+      justify-content: "center";
+      align-items: "center";
+      text-align: center;
+  }
