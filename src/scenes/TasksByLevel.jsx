@@ -12,9 +12,7 @@ export default function TasksByLevel() {
     const navigate = useNavigate()
     const { taskData, setSelectedTask, selectedLevel, setTaskData } = useContext(TaskContext);
     // const [selectedTask, setSelectedTask] = useState()
-    console.log({taskData})
 
-    console.log({selectedLevel})
 
 
     useEffect(() => { // useEffect hook to fetch tasks when the selectedLevel changes
@@ -27,15 +25,12 @@ export default function TasksByLevel() {
           .catch(err => console.error(err)); 
       }, [selectedLevel]); // re-run the effect whenever the selectedLevel value changes
     
+      
       const onClickTask = (taskNo) => { // onClickTask function to handle a click event on a task
-        setSelectedTask(taskNo); // update the selected task using setSelectedTask
-        navigate("/task1"); 
+        setSelectedTask(taskNo); 
+        console.log('---------',taskNo)
+        navigate(`/task${taskNo}`); 
 
-        // const onClickTask4 = () => {
-        //     // setBestFor(1);
-        //     setSelectedTask(4);
-        //     navigate("/task4");
-        // };
     };
 
     return (

@@ -12,9 +12,7 @@ export default function TasksByLevel() {
     const navigate = useNavigate()
     const { taskData, setSelectedTask, selectedLevel, setTaskData } = useContext(TaskContext);
     // const [selectedTask, setSelectedTask] = useState()
-    console.log({taskData})
 
-    console.log({selectedLevel})
 
     useEffect(() => {
         fetch('https://zen-path-api.web.app/tasks')
@@ -30,6 +28,12 @@ export default function TasksByLevel() {
         // setSelectedLevel(1);
         setSelectedTask(taskNo);
         navigate("/task1");
+
+        const onClickTask4 = () => {
+            // setBestFor(1);
+            setSelectedTask(4);
+            navigate("/task4");
+        };
     };
 
     return (

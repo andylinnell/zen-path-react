@@ -12,7 +12,6 @@ export default function OneTaskVideo({ task }) {
 
     const [taskData, setTaskData] = useState()
     
-console.log({selectedTask})
 
     useEffect(() => {
         fetch('https://zen-path-api.web.app/tasks')

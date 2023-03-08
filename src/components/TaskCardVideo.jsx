@@ -12,16 +12,17 @@ export default function TaskCardVideo({ task }) {
 
     return (
         <div className="videotask">
-        <Container>
-            <Row>
-                <Col className='vidh1'>{task.title}</Col>
-            </Row>
-            <Row>
-                <Col>
-                    <div className='viddiv'>
-                        <iframe width="500em" height="315px" src={task.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </Col>
+            <Container>
+                <Row>
+                    <Col className='vidh1'>{task.title}</Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className='viddiv'>
+                            <iframe width="500em" height="315px" src={task.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </Col>
+                </Row>
                 <Row>
                     <Col>
                         <p>Click When Finished</p>
@@ -37,11 +38,11 @@ export default function TaskCardVideo({ task }) {
                         </Form>
                     </Col>
                 </Row>
-            </Row>
-            <div className="homebutton">
-                <Button onClick={() => navigate('/tasks')}>Back to Tasks</Button>
-            </div>
-        </Container>
-    </div>
+
+                <div className="homebutton">
+                    <Button onClick={() => navigate('/tasks')}>Back to Tasks</Button>
+                </div>
+            </Container>
+        </div>
     )
 }

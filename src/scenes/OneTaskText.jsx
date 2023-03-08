@@ -10,7 +10,6 @@ export default function OneTaskText() {
          = useContext(TaskContext);
 
     
-console.log({selectedTask})
 
     useEffect(() => {
         fetch('https://zen-path-api.web.app/tasks')
