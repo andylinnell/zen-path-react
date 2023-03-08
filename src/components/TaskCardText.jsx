@@ -10,9 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function TaskCardText({ task }) {
     const navigate = useNavigate();
-  
-
-
 
     return (
         <div className="texttask">

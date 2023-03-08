@@ -5,7 +5,8 @@ import './App.css';
 import OneTaskText from './scenes/OneTaskText';
 import OneTaskVideo from './scenes/OneTaskVideo';
 import Admin from './scenes/Admin';
-// import { TaskContentDataProvider } from './context/TaskContext';
+import { TaskContentDataProvider } from './context/TaskContext';
+import TasksByLevelSelect from './scenes/TasksByLevelSelect';
 
 
 function App() {
@@ -13,15 +14,16 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          {/* <TaskContentDataProvider > */}
+          <TaskContentDataProvider >
             <Routes>
               <Route path="/tasks" element={<TasksByLevel />} />
+              <Route path="/levelselect" element={<TasksByLevelSelect />} />
               <Route exact path="/" element={<HomePage />} />
               <Route exact path="/task1" element={<OneTaskText />} />
               <Route exact path="/task4" element={<OneTaskVideo />} />
               <Route exact path="/admin" element={<Admin />} />
             </Routes>
-          {/* </TaskContentDataProvider> */}
+          </TaskContentDataProvider>
         </header>
       </div>
     </BrowserRouter>

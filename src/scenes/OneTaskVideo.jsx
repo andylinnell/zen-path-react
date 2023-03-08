@@ -1,48 +1,42 @@
-import { useNavigate } from 'react-router-dom'
-import Button from 'react-bootstrap/Button'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form';
+import { useState, useEffect, useContext } from 'react'
 import ".//zen-path.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { TaskContext } from '../context/TaskContext';
+import TaskCardVideo from '../components/TaskCardVideo'
 
 export default function OneTaskVideo({ task }) {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
+
+    const { selectedTask, setSelectedTask } = useContext(TaskContext);
+    const { selectedLevel, setSelectedLevel } = useContext(TaskContext);
+
+    const [taskData, setTaskData] = useState()
+    
+console.log({selectedTask})
+
+    useEffect(() => {
+        fetch('https://zen-path-api.web.app/tasks')
+            .then(res => res.json())
+            .then((data) => {
+                const tasks = data.filter((task) => task.taskNo === selectedTask && task.level === selectedLevel)
+                setTaskData(tasks)
+            })
+            .catch(err => console.error(err))
+    }, []);
 
 
     return (
-        <div className="videotask">
-            <Container>
-                <Row>
-                    <Col className='vidh1'>Video Task</Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <div className='viddiv'>
-                            <iframe width="500em" height="315px" src="https://www.youtube.com/embed/inpok4MKVLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </Col>
-                    <Row>
-                        <Col>
-                            <p>Click When Finished</p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col className='checkbox'>
-                            <Form>
-                                <Form.Check
-                                    type="switch"
-                                    id="custom-switch"
-                                />
-                            </Form>
-                        </Col>
-                    </Row>
-                </Row>
-                <div className="homebutton">
-                    <Button onClick={() => navigate('/tasks')}>Back to Tasks</Button>
-                </div>
-            </Container>
-        </div>
+        <article>
+
+            {!taskData
+                ? (<h2>Loading...</h2>)
+                : (<section id="section">
+                    {taskData.map((element) => {
+                        return <TaskCardVideo key={element._id} task={element} />
+                    })}
+                </section>)
+            }
+
+        </article>
     )
 }

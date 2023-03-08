@@ -15,6 +15,7 @@ export default function HomePage() {
 
     return (
         <div className="homebg">
+
             <div>
             <Button  onClick={() => navigate('/admin')}>Admin</Button>
             </div>
@@ -30,7 +31,7 @@ export default function HomePage() {
             </Row >
             <Row>
                 <Col>
-                <Button className='beginbutton' onClick={() => navigate('/tasks')}>Begin Your Journey</Button>
+                <Button className='beginbutton' onClick={() => navigate('/levelselect')}>Begin Your Journey</Button>
                 </Col>
             </Row>
         </div>

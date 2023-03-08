@@ -1,36 +1,38 @@
-import { useEffect, useContext } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import ".//zen-path.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import TaskCardText from '../components/TaskCardText'
 import { TaskContext } from '../context/TaskContext';
+import TasksByLevel from '../scenes/TasksByLevel';
 
 
 export default function OneTaskText() {
-    const { selectedTask, selectedLevel, setTaskData, taskData }
-         = useContext(TaskContext);
+    const navigate = useNavigate()
+    const { selectedLevel, setSelectedLevel } = useContext(TaskContext);
+    const [levelData, setLevelData] = useState()
 
     
-console.log({selectedTask})
+console.log({selectedLevel})
 
     useEffect(() => {
         fetch('https://zen-path-api.web.app/tasks')
             .then(res => res.json())
             .then((data) => {
-                const tasks = data.filter((task) => task.taskNo === selectedTask && task.level === selectedLevel)
+                const levels = data.filter((task) => task.level === selectedLevel)
                 setTaskData(tasks)
             })
             .catch(err => console.error(err))
-    }, []);
+    }, [selectedLevel]);
     
 
     return (
         <article>
 
-            {!taskData
+            {!levelData
                 ? (<h2>Loading...</h2>)
                 : (<section id="section">
-                    {taskData.map((element) => {
-                        return <TaskCardText key={element._id} task={element} />
+                    {levelData.map((element) => {
+                        return <TasksByLevel key={element._id} level={element} taskTitle={element.title}/>
                     })}
                 </section>)
             }
