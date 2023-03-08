@@ -16,20 +16,26 @@ export default function TasksByLevel() {
 
     console.log({selectedLevel})
 
-    useEffect(() => {
-        fetch('https://zen-path-api.web.app/tasks')
-            .then(res => res.json())
-            .then((data) => {
-                const levels = data.filter((task) => task.level === selectedLevel)
-                setTaskData(levels)
-            })
-            .catch(err => console.error(err))
-    }, [selectedLevel]);
 
-    const onClickTask = (taskNo) => {
-        // setSelectedLevel(1);
-        setSelectedTask(taskNo);
-        navigate("/task1");
+    useEffect(() => { // useEffect hook to fetch tasks when the selectedLevel changes
+        fetch('https://zen-path-api.web.app/tasks') 
+          .then(res => res.json()) // convert the response to JSON
+          .then((data) => {
+            const levels = data.filter((task) => task.level === selectedLevel); 
+            setTaskData(levels); // update the taskData value with the filtered data
+          })
+          .catch(err => console.error(err)); 
+      }, [selectedLevel]); // re-run the effect whenever the selectedLevel value changes
+    
+      const onClickTask = (taskNo) => { // onClickTask function to handle a click event on a task
+        setSelectedTask(taskNo); // update the selected task using setSelectedTask
+        navigate("/task1"); 
+
+        // const onClickTask4 = () => {
+        //     // setBestFor(1);
+        //     setSelectedTask(4);
+        //     navigate("/task4");
+        // };
     };
 
     return (

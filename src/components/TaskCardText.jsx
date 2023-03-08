@@ -28,7 +28,7 @@ export default function TaskCardText({ task }) {
                     <Col>
                         <div className='textbox'>
                             <p>{task.text}</p>
-                        </div>
+                            <iframe width="100%" height="315px" src={task.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                        </div>
                     </Col>
                 </Row>
 
