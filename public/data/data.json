@@ -1,0 +1,135 @@
+[
+    {
+        "level": 2,
+        "taskNo": 1,
+        "title": "Deep Breathing",
+        "video": "",
+        "text": "Sit in a comfortable position with your back straight and your eyes closed. Take a deep breath in through your nose, filling your lungs completely. Hold the breath for a few seconds, then exhale slowly through your mouth, pushing all the air out of your lungs. Repeat for several cycles, focusing on the sensation of the breath moving in and out of your body.",
+        "complete": false,
+        "taskRef": 5
+
+    },
+    {
+        "level": 3,
+        "taskNo": 1,
+        "title": "Non-Attachment Practice ",
+        "video": "",
+        "text": "As you progress in your meditation practice, you may start to experience deeper states of awareness and insight. It's important to remember that these experiences are impermanent and to avoid becoming attached to them. Instead, focus on observing them without judgment and letting them go. This practice of non-attachment can help you cultivate a deeper sense of peace and equanimity.",
+        "complete": false,
+        "taskRef": 9
+
+        
+    },
+    {
+        "level": 1,
+        "taskNo": 1,
+        "title": "What is Meditation?",
+        "video": "",
+        "text": "How do you learn to meditate? In mindfulness meditation, we're learning how to pay attention to the breath as it goes in and out, and notice when the mind wanders from this task. This practice of returning to the breath builds the muscles of attention and mindfulness. When we pay attention to our breath, we are learning how to return to, and remain in, the present moment—to anchor ourselves in the here and now on purpose, without judgement. The idea behind mindfulness seems simple—the practice takes patience. Indeed, renowned meditation teacher Sharon Salzberg recounts that her first experience with meditation showed her how quickly the mind gets caught up in other tasks. “I thought, okay, what will it be, like, 800 breaths before my mind starts to wander? And to my absolute amazement, it was one breath, and I'd be gone,” says Salzberg.",
+        "image": "https://img.mensxp.com/media/content/2022/Oct/yoga-lotus-pose-meditation_635b7b1822f7c.jpeg",
+        "route": "task1",
+        "complete": false,
+        "taskRef": 1
+    },
+    {
+        "level": 2,
+        "taskNo": 2,
+        "title": "Counted breathing",
+        "video": "",
+        "text": "Similar to deep breathing, sit comfortably with your eyes closed and your back straight. Take a deep breath in through your nose and count to four as you do so. Hold your breath for a count of four, then exhale slowly through your mouth for a count of four. Hold your breath for another count of four before beginning the cycle again.",
+        "complete": false,
+        "taskRef": 6
+
+
+    },
+    {
+        "level": 3,
+        "taskNo": 2,
+        "title": "Cultivate Mindfulness in Daily Life",
+        "video": "",
+        "text": "Meditation is not just something you do for a set amount of time each day. It's a way of being in the world. Try to bring mindfulness to your daily activities, such as walking, eating, or brushing your teeth. This can help you stay present and focused throughout the day and deepen your meditation practice.",
+        "complete": false,
+        "taskRef": 10
+
+
+    },
+    {
+        "level": 1,
+        "taskNo": 2,
+        "title": "Why Learn How to Meditate?",
+        "video": "",
+        "text": "While meditation isn't a cure-all, it can certainly provide some much-needed space in your life. Sometimes, that's all we need to make better choices for ourselves, our families, and our communities. And the most important tools you can bring with you to your meditation practice are a little patience, some kindness for yourself, and a comfortable place to sit. \n When we meditate, we inject far-reaching and long-lasting benefits into our lives. And bonus: you don't need any extra gear or an expensive membership.",
+        "image": "https://cdn.pixabay.com/photo/2016/05/10/21/50/meditation-1384758__480.jpg",
+        "route": "task1",
+        "complete": false,
+        "taskRef": 2
+
+    },
+    {
+        "level": 1,
+        "taskNo": 3,
+        "title": "How to Meditate",
+        "video": "",
+        "text": "Meditation is a technique that helps you to calm your mind, focus your attention, and cultivate a sense of inner peace and tranquility. To start meditating, find a quiet and comfortable place where you won't be disturbed. Sit with your back straight and your feet on the floor or cross-legged on a cushion. You can either close your eyes or leave them open, whichever feels more comfortable to you. \n Next, begin to focus your attention on your breath. Notice the sensation of the air moving in and out of your body, and try to keep your attention on this sensation. If your mind wanders, simply acknowledge the thought or feeling and gently bring your attention back to your breath. You can also try counting your breaths or repeating a mantra to help you stay focused. \n Finally, when you're ready to end your meditation, take a few deep breaths and slowly open your eyes. Take a moment to notice how you feel and try to carry that sense of calm and focus with you as you go about your day. With regular practice, meditation can help you to reduce stress, improve your focus and concentration, and cultivate a greater sense of well-being and inner peace.",
+        "image": "https://thumbs.dreamstime.com/b/web-197966589.jpg",
+        "complete": false,
+        "taskRef":  3
+
+
+    },
+    {
+        "level": 2,
+        "taskNo": 3,
+        "title": "Body Scan",
+        "video": "",
+        "text": "Find a comfortable position lying down or sitting with your eyes closed. Take a few deep breaths to relax your body. Then, starting at the top of your head, slowly scan down through your body, focusing on each part in turn. As you scan, take note of any areas of tension or discomfort, and breathe deeply into them to release the tension. Continue scanning down through your body until you reach your toes.",
+        "complete": false,
+        "taskRef": 7
+
+        
+    },
+    {
+        "level": 3,
+        "taskNo": 3,
+        "title": "Explore Different Types of Meditation",
+        "video": "",
+        "text": "While there are many different types of meditation, you may find that certain types resonate more with you than others. As you become more advanced in your practice, it can be helpful to explore different types of meditation, such as Loving-Kindness Meditation, Vipassana Meditation, or Transcendental Meditation. This can help you continue to deepen your practice and gain new insights and perspectives.",
+        "complete": false,
+        "taskRef": 11
+
+
+    },
+    {
+        "level": 2,
+        "taskNo": 4,
+        "title": "10 Minute Meditation for Beginners",
+        "video": "https://www.youtube.com/embed/U9YKY7fdwyg",
+        "text": "Check out this 10 minute meditation for beginners",
+        "complete": false,
+        "taskRef": 8
+
+
+    },
+    {
+        "level": 3,
+        "taskNo": 4,
+        "title": "10 Minute Meditation for Anxiety",
+        "video": "https://www.youtube.com/embed/inpok4MKVLM",
+        "text": "Check out this 10 minute meditaiton for dealing with anxiety",
+        "complete": false,
+        "taskRef": 12
+
+
+    },
+    {
+        "level": 1,
+        "taskNo": 4,
+        "title": " Meditation FAQs",
+        "video": "https://www.youtube.com/embed/he2WkG_u7Pc",
+        "text": "Check out these frequently asked questin on meditation",
+        "image": "",
+        "complete": false,
+        "taskRef": 4
+
+    }
+]

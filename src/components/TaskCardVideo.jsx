@@ -17,10 +17,8 @@ export default function TaskCardVideo({ task }) {
                     <Col className='vidh1'>{task.title}</Col>
                 </Row>
                 <Row>
-                    <Col>
-                        <div className='viddiv'>
-                            <iframe width="500em" height="315px" src={task.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
+                        <Col className='viddiv'>
+                            <iframe width="100%" height="500px" src={task.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </Col>
                 </Row>
                 <Row>
@@ -40,7 +38,7 @@ export default function TaskCardVideo({ task }) {
                 </Row>
 
                 <div className="homebutton">
-                    <Button onClick={() => navigate('/tasks')}>Back to Tasks</Button>
+                <button onClick={() => navigate('/tasks')} class="button-85" role="button">Back to Tasks</button>
                 </div>
             </Container>
         </div>

@@ -13,49 +13,55 @@ export default function TasksByLevel() {
     const { taskData, setSelectedTask, selectedLevel, setTaskData } = useContext(TaskContext);
     // const [selectedTask, setSelectedTask] = useState()
 
+    useEffect(() => { // fetch tasks when the selectedLevel changes
+        fetch('https://zen-path-api.web.app/tasks')
+            .then(res => res.json()) // convert the response to JSON
+            .then((data) => {
+                const levels = data.filter((task) => task.level === selectedLevel);
+                setTaskData(levels); // update the taskData value with the filtered data
+            })
+            .catch(err => console.error(err));
+    }, [selectedLevel]); // re-run the effect whenever the selectedLevel value changes
 
 
-    useEffect(() => { // useEffect hook to fetch tasks when the selectedLevel changes
-        fetch('https://zen-path-api.web.app/tasks') 
-          .then(res => res.json()) // convert the response to JSON
-          .then((data) => {
-            const levels = data.filter((task) => task.level === selectedLevel); 
-            setTaskData(levels); // update the taskData value with the filtered data
-          })
-          .catch(err => console.error(err)); 
-      }, [selectedLevel]); // re-run the effect whenever the selectedLevel value changes
-    
-      
-      const onClickTask = (taskNo) => { // onClickTask function to handle a click event on a task
-        setSelectedTask(taskNo); 
-        console.log('---------',taskNo)
-        navigate(`/task${taskNo}`); 
+    const onClickTask = (taskNo) => { // handle a click event on a task
+        setSelectedTask(taskNo);
+        console.log('---------', taskNo)
+        navigate(`/task${taskNo}`);
 
     };
 
     return (
-        <div className='tasks'>
-
-            <Container >
-                <Row>
-                    <Col className="tasksh1">
-                        <h1>Zen Tasks</h1>
+        < div className='tasklist'>
+                            <Row>
+                    <Col >
+                        <h1 className="tasksh1">Zen Tasks</h1>
                     </Col>
                 </Row>
-                {taskData?.map(task => (
-                    <Row key={task._id} className="taskimg" onClick={() => onClickTask(task.taskNo)}>
-                        <Col>
-                            <img src={`../images/mapicon${task.taskNo}.png`} alt="medi-man" />
-                            <p>{task.title}</p>
+            <Container className='d-flex taskcontainer' >
+
+                <Row className='taskbox '>
+
+                    {taskData?.map(task => (
+                        <Col sm={12} key={task._id} className="taskimg">
+                            <img src={`../images/mapicon${task.taskNo}.png`} alt="medi-man" onClick={() => onClickTask(task.taskNo)} className="taskbuttons" />
+                            <p className='taskbutton'>{task.title}</p>
                         </Col>
-                    </Row >
-                ))}
-                <Row>
-                    <Col>
-                        <Button className='homebutton' onClick={() => navigate('/')} >Back to Home</Button>
-                    </Col>
+                    ))}
                 </Row>
             </Container>
+            <Row className=''>
+                <Col>
+                    <button onClick={() => navigate('/')} class="button-85" role="button">Back Home</button>
+                </Col>
+            </Row>
         </div>
+
+
+
+
+
+
+
     )
 }

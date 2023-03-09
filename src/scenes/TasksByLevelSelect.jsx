@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Button  from 'react-bootstrap/Button'
 import ".//zen-path.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DropDown from '../components/DropDown';
@@ -13,14 +14,15 @@ export default function TasksByLevelSelect() {
 
 
     return (
-        <div className='tasks'>
+        <div className='tasksbylevel'>
 
-            <Container >
+            <Container>
                 <Row>
-                    <Col className="tasksh1">
-                        <h1>Zen Tasks</h1>
+                    <Col >
+                        <h1 className="tasksh1">Zen Levels</h1>
                     </Col>
                 </Row>
+                
                 <DropDown />
             </Container>
         </div>

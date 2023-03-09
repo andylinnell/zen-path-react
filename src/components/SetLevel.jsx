@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from 'react'
 import ".//zen-path.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import TaskCardText from '../components/TaskCardText'
 import { TaskContext } from '../context/TaskContext';
 import TasksByLevel from '../scenes/TasksByLevel';
 
@@ -12,7 +11,6 @@ export default function OneTaskText() {
     const [levelData, setLevelData] = useState()
 
     
-console.log({selectedLevel})
 
     useEffect(() => {
         fetch('https://zen-path-api.web.app/tasks')
