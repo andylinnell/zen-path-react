@@ -33,18 +33,25 @@ export default function TasksByLevel() {
 
     return (
         < div className='tasklist'>
-                            <Row>
-                    <Col >
-                        <h1 className="tasksh1">Zen Tasks</h1>
-                    </Col>
-                </Row>
+            <Row>
+                <Col >
+                    <h1 className="tasksh1">Zen Tasks</h1>
+                </Col>
+            </Row>
             <Container className='d-flex taskcontainer' >
 
                 <Row className='taskbox '>
 
                     {taskData?.map(task => (
                         <Col sm={12} key={task._id} className="taskimg">
-                            <img src={`../images/mapicon${task.taskNo}.png`} alt="medi-man" onClick={() => onClickTask(task.taskNo)} className="taskbuttons" />
+                            <div style={{ position: 'relative' }}>
+                                <img src={`../images/mapicon${task.taskNo}.png`} alt="medi-man" onClick={() => onClickTask(task.taskNo)} className="taskbuttons" />
+                                {task.complete && (
+                                    <div >
+                                        <img src={`../images/check1.png`} alt="overlay" className='check' />
+                                    </div>
+                                )}
+                            </div>
                             <p className='taskbutton'>{task.title}</p>
                         </Col>
                     ))}
@@ -52,16 +59,9 @@ export default function TasksByLevel() {
             </Container>
             <Row className=''>
                 <Col>
-                    <button onClick={() => navigate('/')} class="button-85" role="button">Back Home</button>
+                    <button onClick={() => navigate('/levelselect')} class="button-85" role="button">Back to Levels</button>
                 </Col>
             </Row>
         </div>
-
-
-
-
-
-
-
     )
 }

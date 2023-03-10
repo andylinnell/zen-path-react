@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import "../scenes/zen-path.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import FinishTask from './FinishTask'
 
 export default function TaskCardVideo({ task }) {
     const navigate = useNavigate();
@@ -17,8 +18,8 @@ export default function TaskCardVideo({ task }) {
                     <Col className='vidh1'>{task.title}</Col>
                 </Row>
                 <Row>
-                        <Col className='viddiv'>
-                            <iframe width="100%" height="500px" src={task.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <Col className='viddiv'>
+                        <iframe width="100%" height="500px" src={task.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </Col>
                 </Row>
                 <Row>
@@ -26,19 +27,9 @@ export default function TaskCardVideo({ task }) {
                         <p>Click When Finished</p>
                     </Col>
                 </Row>
-                <Row>
-                    <Col className='checkbox'>
-                        <Form>
-                            <Form.Check
-                                type="switch"
-                                id="custom-switch"
-                            />
-                        </Form>
-                    </Col>
-                </Row>
-
+                <FinishTask />
                 <div className="homebutton">
-                <button onClick={() => navigate('/tasks')} class="button-85" role="button">Back to Tasks</button>
+                    <button onClick={() => navigate('/tasks')} class="button-85" role="button">Back to Tasks</button>
                 </div>
             </Container>
         </div>

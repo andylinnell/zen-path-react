@@ -40,7 +40,7 @@ export default function TaskCardText({ task }) {
                         <p className='whenfinished'>Click When Finished</p>
                     </Col>
                 </Row>
-                    <FinishTask/>
+                    <FinishTask task={task} />
                 <div className="homebutton">
                     <button onClick={() => navigate('/tasks')} class="button-85" role="button">Back to Tasks</button>
 

@@ -16,9 +16,7 @@
         "video": "",
         "text": "As you progress in your meditation practice, you may start to experience deeper states of awareness and insight. It's important to remember that these experiences are impermanent and to avoid becoming attached to them. Instead, focus on observing them without judgment and letting them go. This practice of non-attachment can help you cultivate a deeper sense of peace and equanimity.",
         "complete": false,
-        "taskRef": 9
-
-        
+        "taskRef": 9  
     },
     {
         "level": 1,
@@ -50,8 +48,6 @@
         "text": "Meditation is not just something you do for a set amount of time each day. It's a way of being in the world. Try to bring mindfulness to your daily activities, such as walking, eating, or brushing your teeth. This can help you stay present and focused throughout the day and deepen your meditation practice.",
         "complete": false,
         "taskRef": 10
-
-
     },
     {
         "level": 1,

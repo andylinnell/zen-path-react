@@ -62,6 +62,7 @@ export default function Admin({ task }) {
 
                                 <AddTask/>
 
+
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button variant="secondary" onClick={handleClose}>
