@@ -39,12 +39,12 @@ export default function DropDown() {
 
                 <Col sm={12} md={4} onClick={onClickLevel2}>
                     <h1 className='lvlh1'>Level 2</h1>
-                    <img className='level2pic' src="../images/peakpx2.png" alt="level1pic" />
+                    <img className='level2pic' src="../images/peakpx2.png" alt="level2pic" />
                 </Col>
 
                 <Col sm={12} md={4} onClick={onClickLevel3}>
                     <h1 className='lvlh1'>Level 3</h1>
-                    <img className='level3pic' src="../images/peakpx1.png" alt="level1pic" />
+                    <img className='level3pic' src="../images/peakpx1.png" alt="level3pic" />
                 </Col>
             </Row>
             <Row>

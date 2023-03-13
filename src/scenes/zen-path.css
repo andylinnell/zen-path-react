@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
+  
 *,
 *::before,
 *::after {
@@ -16,6 +16,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-color: black;
     text-align: center;}
 
 
@@ -75,26 +76,26 @@ html {
 .tasksh1 {
     color: purple;
     text-align: center;
-    padding-top: 4vh;
+    padding-top: 1vh;
     font-family: 'Comfortaa', cursive;
-    font-weight: 600;
+    font-weight: 1000;
     font-size: 4em;
     margin-bottom: .5em;
     filter: drop-shadow(0 0 0.75rem rgb(162, 118, 169));
+    
 
 
 }
 
 
 .taskh1 {
-    color: purple;
+    color: rgb(116, 55, 116);
     text-align: center;
-    padding-top: 6vh;
     font-family: 'Comfortaa', cursive;
-    font-weight: 600;
-    font-size: 3em;
-    margin-bottom: 1em;
-    z-index: 999;
+    font-weight: 700;
+    font-size: 4.3em;
+    margin-bottom: .4em;
+    
 }
 
 .vidh1 {
@@ -157,8 +158,8 @@ p {
     font-size: .8em;
     margin-top: 8px;
     z-index: 9999;
-    background-image: url('https://zen-path-react.web.app/images/check.png');
-
+    font-family: 'Comfortaa', cursive;
+    font-weight: bolder;
 }
 
 .check {
@@ -169,8 +170,16 @@ p {
     width: 70px;
     font-size: .9em;
     z-index: 9999;
+}
+
+.taskbuttons:hover {
+    transform: scale(1.10);
+    filter: drop-shadow(0 0 10px rgba(0, 5, 0.319));
+    transition: transform .4s; /* Animation */
 
 }
+
+
 
 
 /* CSS */
@@ -265,20 +274,37 @@ p {
 .level1pic {
     width: 30%;
     margin-bottom: 2em;
+    transition: transform .4s; /* Animation */
 
+}
+
+.level1pic:hover {
+    transform: scale(1.10);
+    filter: drop-shadow(0 0 10px rgba(0, 5, 0.319));
 }
 
 .level2pic {
     width: 30%;
     margin-bottom: 2em;
+    transition: transform .4s; /* Animation */
 
+}
 
+.level2pic:hover {
+    transform: scale(1.10);
+    filter: drop-shadow(0 0 10px rgba(0, 5, 0.319));
 }
 
 .level3pic {
     width: 30%;
     margin-bottom: 2em;
+    transition: transform .4s; /* Animation */
 
+}
+
+.level3pic:hover {
+    transform: scale(1.10);
+    filter: drop-shadow(0 0 10px rgba(0, 5, 0.319));
 }
 
 /******************************* Images *****************************/
@@ -331,8 +357,9 @@ p {
     padding: 1em;
     margin-bottom: 40px;
     margin-top: 40px;
-    background-color: rgba(245, 245, 245, 0.317);
-    border-radius: 2%;
+    background-color: rgba(245, 245, 245, 0.619);
+    border-radius: 15px;
+    /* width: 40vw; */
 }
 
 /******************************* Task Text *****************************/

@@ -1,7 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import React from 'react'
-import { useState } from 'react'
-import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -18,34 +16,28 @@ export default function TaskCardText({ task }) {
     return (
         <div className="texttask">
 
-            <Container>
+            <Container fluid>
 
                 <Row>
-                    <Col className='taskh1'><h1>{task.title}</h1></Col>
+                    <Col ><h1 className='taskh1'>{task.title}</h1></Col>
                 </Row>
-                <div className='textbox'>
-                    <Row>
-                        <Col>
-                            <p className='textcard'>{task.text}</p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        {/* <Col >
-                        <img className='tempimg' src="../images/—Pngtree—cartoon hand drawn lotus meditator_4887171.png" alt='asldfj' />
-                    </Col> */}
-                    </Row>
-                </div>
+                <Row className='textbox'>
+                    <Col >
+                        <p className='textcard'>{task.text}</p>
+                    </Col>
+                </Row>
                 <Row>
                     <Col >
                         <p className='whenfinished'>Click When Finished</p>
                     </Col>
                 </Row>
-                    <FinishTask task={task} />
+                <FinishTask task={task} />
                 <div className="homebutton">
                     <button onClick={() => navigate('/tasks')} class="button-85" role="button">Back to Tasks</button>
 
                 </div>
             </Container>
+
         </div>
     )
 }

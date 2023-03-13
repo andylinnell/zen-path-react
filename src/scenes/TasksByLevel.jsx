@@ -52,7 +52,7 @@ export default function TasksByLevel() {
                                     </div>
                                 )}
                             </div>
-                            <p className='taskbutton'>{task.title}</p>
+                            <h3 className='taskbutton'>{task.title}</h3>
                         </Col>
                     ))}
                 </Row>

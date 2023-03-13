@@ -25,6 +25,9 @@ export default function TasksByLevelSelect() {
                 
                 <DropDown />
             </Container>
+            <p onClick={() => navigate('/admin')}  role="button">Admin</p>
+            {/* <button >Admin</button> */}
+
         </div>
     )
 }

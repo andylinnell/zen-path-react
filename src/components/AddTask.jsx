@@ -13,13 +13,8 @@ export default function AddTask() {
     const { taskNo, setTaskNo } = useContext(TaskContext);
     const { title, setTitle } = useContext(TaskContext);
     const { text, setText } = useContext(TaskContext);
+    const { video, setVideo} = useContext(TaskContext)
 
-    // const [formData, setFormData] = useState({
-    //     title: "",
-    //     taskNo: "",
-    //     level: "",
-    //     text: "",
-    // });
 
     const formData = { title, taskNo, level, text }
 
@@ -39,20 +34,6 @@ export default function AddTask() {
                 .catch((error) => console.error(error));
         }
 
-
-        // const handleInputChange = (e) => {
-        //     // const { name, value } = e.target;
-
-        //     // setFormData((prevFormData) => ({
-        //     //     ...prevFormData,
-        //     //     [name]: value,
-        //     // }));
-
-        //     setFormData({ value: e.target.value });
-        // };
-
-        // console.log({ title })
-        // console.log({ formData })
 
         return (
             <Form onSubmit={handleSubmit}>
@@ -85,35 +66,17 @@ export default function AddTask() {
                 </Form.Text>
             </Form.Group>
 
+            <Form.Group className="mb-3" controlId="formBasicVideo">
+                <Form.Label>Video</Form.Label>
+                <Form.Control type="text" placeholder="video" value={video} onChange={(e) => setVideo(e.target.value)} />
+                <Form.Text className="text-muted">
+                </Form.Text>
+            </Form.Group>
+
                 <Button variant="primary" type="submit"  >
                     Submit
                 </Button>
             </Form>
-
-            //     <Form onSubmit={handleSubmit}>
-            //     <Form.Group className="mb-3" controlId="formBasicEmail">
-            //       <Form.Label>Email address</Form.Label>
-            //       <Form.Control type="email" placeholder="Enter email" />
-            //       <Form.Text className="text-muted">
-            //         We'll never share your email with anyone else.
-            //       </Form.Text>
-            //     </Form.Group>
-
-            //     <Form.Group className="mb-3" controlId="formBasicPassword">
-            //       <Form.Label>Password</Form.Label>
-            //       <Form.Control type="password" placeholder="Password" />
-            //     </Form.Group>
-            //     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            //       <Form.Check type="checkbox" label="Check me out" />
-            //     </Form.Group>
-            //     <Button variant="primary" type="submit">
-            //       Submit
-            //     </Button>
-            //   </Form>
-
-
-
-
 
 
 

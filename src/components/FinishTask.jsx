@@ -7,7 +7,7 @@ export default function FinishTask({task}) {
       const toggleDone = (e) => {
         let _task = task
         _task.complete = e.target.value === "on"
-        fetch(`http://127.0.0.1:5002/tasks/${task._id}`, {
+        fetch(`https://zen-path-api.web.app/tasks/${task._id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

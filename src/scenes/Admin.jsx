@@ -28,22 +28,12 @@ export default function Admin({ task }) {
                 </Row>
                 <Row>
                     <Col className='adminbutt'>
-                        <h2>Level 1</h2>
+                        <h2>Add Task</h2>
                         <Button variant="primary" onClick={handleShow}>Add Task Level 1</Button>              
                     </Col>
                 </Row >
-                <Row>
-                    <Col className='adminbutt'>
-                        <h2>Level 2</h2>
-                        <Button variant="primary" onClick={handleShow}>Add Task Level 2</Button>
-                    </Col>
-                </Row >
-                <Row>
-                    <Col className='adminbutt'>
-                        <h2>Level 3</h2>
-                        <Button className='adminbutt' variant="primary" onClick={handleShow}>Add Task Level 3</Button>
-                    </Col>
-                </Row >
+
+
                 <Row>
                     <Col>
                         <Button onClick={() => navigate('/')}>Back Home</Button>
