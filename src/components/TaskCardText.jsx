@@ -16,27 +16,27 @@ export default function TaskCardText({ task }) {
     return (
         <div className="texttask">
 
-            <Container fluid>
+            <Row >
+                <Col lg={12}><h1 className='taskh1'>{task.title}</h1></Col>
+            </Row>
 
-                <Row>
-                    <Col ><h1 className='taskh1'>{task.title}</h1></Col>
-                </Row>
-                <Row className='textbox'>
+            <Container >
+                <Row className=''>
                     <Col >
-                        <p className='textcard'>{task.text}</p>
+                        <p className='textbox'>{task.text}</p>
                     </Col>
                 </Row>
-                <Row>
-                    <Col >
-                        <p className='whenfinished'>Click When Finished</p>
-                    </Col>
-                </Row>
-                <FinishTask task={task} />
-                <div className="homebutton">
-                    <button onClick={() => navigate('/tasks')} class="button-85" role="button">Back to Tasks</button>
-
-                </div>
             </Container>
+            <Row>
+                <Col >
+                    <p className='whenfinished'>Click When Finished</p>
+                </Col>
+            </Row>
+            <FinishTask task={task} />
+            <div className="homebutton">
+                <button onClick={() => navigate('/tasks')} class="button-85" role="button">Back to Tasks</button>
+
+            </div>
 
         </div>
     )
